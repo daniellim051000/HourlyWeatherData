@@ -3,7 +3,7 @@
 #TP051131
 
 #Import data
-filepath = '/home/daniellim0510/Documents/Assignment/PDFA/4.Hourlyweatherdata.csv'
+filepath = '/home/daniellim0510/Documents/HourlyWeatherData/4.Hourlyweatherdata.csv'
 data = read.csv(filepath)
 
 #Attach Library
