@@ -35,7 +35,7 @@ output + month
 #analysis example 2
 #In this example, an analysis between X and Y is given to analyze the temperature in each month
 #visualization and exploration
-output = ggplot(data, mapping = aes(x = factor(month), y = temp, color = origin)) + geom_boxplot() + labs(title = 'Temperature in each Month',x = 'Month', y = 'Temperature')
+output = ggplot(data, mapping = aes(x = month, y = temp, color = origin)) + geom_boxplot() + labs(title = 'Temperature in each Month',x = 'Month', y = 'Temperature')
 
 #output
 output
@@ -46,7 +46,7 @@ output
 line = stat_smooth(method = "lm")
 
 #visualization and exploration
-output = ggplot(data = data, mapping = aes(x = temp, y = dewp, color = origin)) + geom_point(alpha = 0.2)+ line + labs(title = 'Dew Point against Temperature', x = 'Temperature ', y = 'Dew Point')
+output = ggplot(data = data, mapping = aes(x = temp, y = dewp, color = origin)) + geom_point(alpha = 0.15)+ line + labs(title = 'Dew Point against Temperature', x = 'Temperature ', y = 'Dew Point')
 
 #output
 output
@@ -58,7 +58,7 @@ output
 line = stat_smooth(method = "lm")
 
 #visualization and exploration
-output = ggplot(data = data, mapping = aes(x = humid, y = dewp, color = origin)) + geom_point(alpha = 0.2) + line + labs(title = 'Scatter Plot of Dew Point against Humid', x = 'Humid ' + y = 'Dew Point')
+output = ggplot(data = data, mapping = aes(x = humid, y = dewp, color = origin)) + geom_point(alpha = 0.15) + line + labs(title = 'Scatter Plot of Dew Point against Humid', x = 'Humid ' + y = 'Dew Point')
 
 #output
 output
@@ -130,7 +130,7 @@ output
 #In this example, an analysis between X and Y is given to
 #analysis pressure against temperature
 line = stat_smooth(method = "lm")
-output = ggplot(data = data, mapping = aes(x = temp, y = pressure, color = origin, na.rm = TRUE)) + geom_point(alpha = 0.2)+ line + labs(title = 'Scatter Plot of Pressure against Temperature'
+output = ggplot(data = data, mapping = aes(x = temp, y = pressure, color = origin, na.rm = TRUE)) + geom_point(alpha = 0.15)+ line + labs(title = 'Scatter Plot of Pressure against Temperature'
                                                                                                                                          ,x = 'Temperature ', y = 'Pressure (Milibars)')
 #output
 output
@@ -148,7 +148,7 @@ output
 #In this example, an analysis between X and Y is given to compare Wind Gust against Wind Speed
 line = stat_smooth(method = "lm")
 #visualization and exploration
-output = ggplot(data = data, mapping = aes(x = wind_speed, y = wind_gust, na.rm = TRUE, color = origin)) + geom_point(alpha = 0.2)+ line + labs(title = 'Scatter Plot of Wind Gust against Wind Speed'
+output = ggplot(data = data, mapping = aes(x = wind_speed, y = wind_gust, na.rm = TRUE, color = origin)) + geom_point(alpha = 0.15)+ line + labs(title = 'Scatter Plot of Wind Gust against Wind Speed'
                                                                                                                                                 ,x = 'Wind Speed (MPH)', y = 'Wind Gust (MPH)')
 #output the result
 output
