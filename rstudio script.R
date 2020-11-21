@@ -58,7 +58,8 @@ output
 line = stat_smooth(method = "lm")
 
 #visualization and exploration
-output = ggplot(data = data, mapping = aes(x = humid, y = dewp, color = origin)) + geom_point(alpha = 0.15) + line + labs(title = 'Scatter Plot of Dew Point against Humid', x = 'Humid ' + y = 'Dew Point')
+output = ggplot(data = data, mapping = aes(x = dewp, y = humid, color = origin)) + geom_point(alpha = 0.15)+ line + labs(title = 'Scatter Plot of Dew Point against Humid',x = 'Dew Point ', 
+                                                                                                                        y = 'Humidty %')
 
 #output
 output
@@ -113,7 +114,7 @@ output
 #In this example, an analysis between X and Y is given to
 #analysis precipitate against humid 
 line = stat_smooth(method = "lm")
-output = ggplot(data = data, mapping = aes(x = humid, y = precip, color = origin)) + geom_point(alpha = 0.2) + line + labs(title = 'Scatter Plot of Precipitate against Humid',
+output = ggplot(data = data, mapping = aes(x = humid, y = precip, color = origin)) + geom_point(alpha = 0.15) + line + labs(title = 'Scatter Plot of Precipitate against Humid',
                                                                                                                            x = 'Humid ', y = 'Precipitate (Inch)')
 #output
 output
